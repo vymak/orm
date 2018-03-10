@@ -9,7 +9,7 @@
 
 namespace Nextras\Orm\Repository;
 
-use Nette\Object;
+use Nette\SmartObject;
 use Nette\Utils\ObjectMixin;
 use Nextras\Orm\Collection\ICollection;
 use Nextras\Orm\Entity\IEntity;
@@ -21,8 +21,10 @@ use Nextras\Orm\Model\IModel;
 use Nextras\Orm\Model\MetadataStorage;
 
 
-abstract class Repository extends Object implements IRepository
+abstract class Repository implements IRepository
 {
+	use SmartObject;
+
 	/** @var array of callbacks with (IEntity $entity) arguments */
 	public $onBeforePersist = [];
 
