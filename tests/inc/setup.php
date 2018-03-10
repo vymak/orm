@@ -27,6 +27,8 @@ $sections = array_keys(parse_ini_file(__DIR__ . '/../sections.ini', true));
 $config = Neon::decode(file_get_contents(__DIR__ . '/../config.neon', true));
 
 foreach ($sections as $section) {
+	file_put_contents(__DIR__ . "/../config.$section.neon", Neon::encode($config[$section]));
+
 	echo "[setup] Bootstraping '{$section}' structure.\n";
 
 	switch ($section) {
