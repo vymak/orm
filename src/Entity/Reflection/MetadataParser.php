@@ -11,7 +11,6 @@ namespace Nextras\Orm\Entity\Reflection;
 use Nette\Utils\Reflection;
 use Nextras\Orm\Collection\ICollection;
 use Nextras\Orm\Entity\IProperty;
-use Nextras\Orm\InvalidArgumentException;
 use Nextras\Orm\InvalidModifierDefinitionException;
 use Nextras\Orm\InvalidStateException;
 use Nextras\Orm\Relationships\ManyHasMany;
